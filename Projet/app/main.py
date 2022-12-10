@@ -13,11 +13,11 @@ from utils import set_bg, body1, price_by_location, vente_by_month, pre_processi
 #) 
 
 
-set_bg('/Users/maroua/Desktop/M1/Streamlit/Projet/assets/background2.jpeg')
-df_20 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2020.csv')
-df_19 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2019.csv')
-df_18 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2018.csv')
-df_17 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2017.csv')
+set_bg('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/assets/background.webp')
+df_20 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2020.csv')
+df_19 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2019.csv')
+df_18 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2018.csv')
+df_17 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2017.csv')
 
 st.sidebar.header("Options:")
 with st.sidebar :

@@ -122,10 +122,10 @@ def head():
         </p>
     """, unsafe_allow_html=True
     )
-df_20 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2020.csv')
-df_19 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2019.csv')
-df_18 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2018.csv')
-df_17 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2017.csv')
+df_20 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2020.csv')
+df_19 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2019.csv')
+df_18 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2018.csv')
+df_17 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2017.csv')
 
 def filter_by_nombre_pieces_principales():
     option = st.selectbox(
@@ -217,7 +217,7 @@ def body1():
     
 def price_by_month() :
     st.subheader("Evolution du prix moyen par mois")
-    df_17 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2017.csv')
+    df_17 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2017.csv')
     df_17['mois'] = df_17['date_mutation'].dt.month
     df_17= df_17.groupby('mois').mean()['valeur_fonciere'].reset_index()
     fig = px.line(df_17, x=df_17['mois'], y="valeur_fonciere")
@@ -271,7 +271,7 @@ def price_by_location():
             </h1>
         """, unsafe_allow_html=True
         )
-        df_19 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2019.csv')
+        df_19 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2019.csv')
         df_19 = df_19.groupby('code_departement')['valeur_fonciere'].mean().reset_index()
         df_19 = df_19.sort_values(by='valeur_fonciere', ascending=False)
         df_19 = df_19.head(50)
@@ -286,7 +286,7 @@ def line_chart_price_evolution():
             </h1>
         """, unsafe_allow_html=True
         )
-    df_20 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2020.csv')
+    df_20 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2020.csv')
 
     df_20['mois'] = df_20['date_mutation'].dt.month
     df_20= df_20.groupby('mois').mean()['valeur_fonciere'].reset_index()
@@ -299,7 +299,7 @@ def vente_by_month():
         </h1>
     """, unsafe_allow_html=True
     )
-    df_18 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2019.csv')
+    df_18 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2019.csv')
     
     df_18['mois'] = df_18['date_mutation'].dt.month
     df_18 = df_18.groupby('mois').count()["id_mutation"].reset_index()
@@ -310,7 +310,7 @@ def vente_by_month():
 
 
 def map_price_by_location():
-    df_18 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/Projet/data/full_2018.csv')
+    df_18 = pre_processing('/Users/maroua/Desktop/M1/Streamlit/streamlit-Real-estate-Project/Projet/data/full_2018.csv')
     
     st.write("""
         <h1 style='font-size:25px'>
